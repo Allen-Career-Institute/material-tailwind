@@ -1,27 +1,27 @@
 <a href="https://www.material-tailwind.com">
     <img width="100%" src="./public/image/material-tailwind-readme.jpg" alt="material-tailwind" style="border-radius: 24px" />
-    <h1 align="center">Material Tailwind</h1>
+    <h1 align="center">Fork of Material Tailwind with ESM</h1>
 </a>
 </br>
 <p align="center">
-  <a href="https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE">
-    <img src="https://img.shields.io/npm/l/@material-tailwind/react?label=%40material-taiwlind%2Freact" alt="License" />
+  <a href="https://github.com/Allen-Career-Institute/material-tailwind/blob/main/LICENSE">
+    <img src="https://img.shields.io/npm/l/@allen-career-institute/material-tailwind-react?label=%40material-taiwlind%2Freact" alt="License" />
   </a>
-  <a href="https://www.npmjs.com/package/@material-tailwind/react">
-    <img src="https://img.shields.io/npm/dt/@material-tailwind/react.svg" alt="Total Downloads">
+  <a href="https://www.npmjs.com/package/@allen-career-institute/material-tailwind-react">
+    <img src="https://img.shields.io/npm/dt/@allen-career-institute/material-tailwind-react.svg" alt="Total Downloads">
   </a>
-  <a href="https://github.com/creativetimofficial/material-tailwind/releases">
+  <a href="https://github.com/Allen-Career-Institute/material-tailwind/releases">
     <img src="https://img.shields.io/badge/version-2.1.10-blue.svg" alt="Version" />
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE">
+  <a href="https://github.com/Allen-Career-Institute/material-tailwind/blob/main/LICENSE">
     <img src="https://img.shields.io/npm/l/@material-tailwind/html?label=%40material-taiwlind%2Fhtml" alt="License" />
   </a>
   <a href="https://www.npmjs.com/package/@material-tailwind/html">
     <img src="https://img.shields.io/npm/dt/@material-tailwind/html.svg" alt="Total Downloads">
   </a>
-  <a href="https://github.com/creativetimofficial/material-tailwind/releases">
+  <a href="https://github.com/Allen-Career-Institute/material-tailwind/releases">
     <img src="https://img.shields.io/badge/version-2.2.3-blue.svg" alt="Version" />
   </a>
 </p>
@@ -35,7 +35,7 @@
 <br />
 <br />
 
-## @material-tailwind/react
+## @allen-career-institute/material-tailwind-react
 
 ### Documentation
 
@@ -354,24 +354,24 @@ Visit <a href="https://www.material-tailwind.com/docs/react/installation">https:
 
 ### Getting Started
 
-Learn how to use @material-tailwind/react components to quickly and easily create elegant and flexible pages using Tailwind CSS.
+Learn how to use @allen-career-institute/material-tailwind-react components to quickly and easily create elegant and flexible pages using Tailwind CSS.
 
-@material-tailwind/react is working with Tailwind CSS classes and you need to have Tailwind CSS installed on your project - <a href="https://tailwindcss.com/docs/installation/framework-guides?ref=material-tailwind" target="_blank">Tailwind CSS Installation.</a>
+@allen-career-institute/material-tailwind-react is working with Tailwind CSS classes and you need to have Tailwind CSS installed on your project - <a href="https://tailwindcss.com/docs/installation/framework-guides?ref=material-tailwind" target="_blank">Tailwind CSS Installation.</a>
 
 <br />
 
-1. Install `@material-tailwind/react`.
+1. Install `@allen-career-institute/material-tailwind-react`.
 
 ```bash
-npm i @material-tailwind/react
+npm i @allen-career-institute/material-tailwind-react
 ```
 
 <br />
 
-2. Once you install @material-tailwind/react you need to wrap your tailwind css configurations with the `withMT()` function coming from @material-tailwind/react/utils.
+2. Once you install @allen-career-institute/material-tailwind-react you need to wrap your tailwind css configurations with the `withMT()` function coming from @allen-career-institute/material-tailwind-react/utils.
 
 ```js
-const withMT = require("@material-tailwind/react/utils/withMT");
+const withMT = require("@allen-career-institute/material-tailwind-react/utils/withMT");
 
 module.exports = withMT({
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -384,21 +384,22 @@ module.exports = withMT({
 
 <br />
 
-3. @material-tailwind/react comes with a theme provider that set's the default theme/styles for components or to provide your own theme/styles to your components. You need to wrap your entire application with the `ThemeProvider` coming from @material-tailwind/react.
+3. @allen-career-institute/material-tailwind-react comes with a theme provider that set's the default theme/styles for components or to provide your own theme/styles to your components. You need to wrap your entire application with the `ThemeProvider` coming from @allen-career-institute/material-tailwind-react.
 
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
-// @material-tailwind/react
-import { ThemeProvider } from "@material-tailwind/react";
+// @allen-career-institute/material-tailwind-react
+import { ThemeProvider } from "@allen-career-institute/material-tailwind-react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+// Theme value has to be passed to the provider
+// according to the usage of the component in the consuming application
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
+    <ThemeProvider value={theme}>
       <App />
     </ThemeProvider>
   </React.StrictMode>,
@@ -407,10 +408,10 @@ root.render(
 
 <br />
 
-4. Congratulations 🥳, you did it, now you're ready to use @material-tailwind/react.
+4. Congratulations 🥳, you did it, now you're ready to use @allen-career-institute/material-tailwind-react.
 
 ```jsx
-import { Button } from "@material-tailwind/react";
+import { Button } from "@allen-career-institute/material-tailwind-react";
 
 export default function Example() {
   return <Button>Button</Button>;
@@ -658,4 +659,4 @@ Please adhere to this project's `CODE_OF_CONDUCT.md`.
 
 ## License
 
-[MIT](https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE)
+[MIT](https://github.com/Allen-Career-Institute/material-tailwind/blob/main/LICENSE)
