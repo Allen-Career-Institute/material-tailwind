@@ -10,5 +10,5 @@
   "module": {
     "type": "es6"
   },
-  "exclude": ["tailwind-merge", "classnames", "deepmerge"]
+  "exclude": ["tailwind-merge", "classnames", "deepmerge", "framer-motion"]
 }
