@@ -234,4 +234,4 @@ const colors = {
   },
 };
 
-module.exports = colors;
+export { colors }

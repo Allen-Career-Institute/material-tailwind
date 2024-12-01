@@ -149,4 +149,7 @@ export * from "./components/spinner";
 export * from "./components/timeline";
 export * from "./components/stepper";
 export * from "./components/speedDial";
+
+export * from "./base"
+
 export default theme;

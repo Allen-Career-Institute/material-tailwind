@@ -1,18 +1,17 @@
 {
-  "name": "@material-tailwind/react",
+  "name": "@allen-career-institute/material-tailwind-react",
   "homepage": "https://material-tailwind.com",
-  "version": "2.1.10",
+  "version": "2.1.10-allenbeta-5",
   "description": "@material-tailwind/react is an easy-to-use components library for ReactJS & Tailwind CSS inspired by Material Design.",
   "repository": "https://github.com/creativetimofficial/material-tailwind",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "typings": "index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
+  "type": "module",
   "scripts": {
     "build:cjs": "swc ./src -d ./dist --only ./src/**/*.ts --config-file .swcrc",
-    "build:dts": "tsc --declaration --declarationMap --emitDeclarationOnly",
+    "build:dts": "tsc -p tsconfig.json --emitDeclarationOnly",
     "copy": "cp ./package.json ./dist && cp ./README.md ./dist && cp ./LICENSE ./dist",
     "build": "pnpm build:cjs && pnpm build:dts && pnpm copy",
     "lint:check": "eslint . --ext js,jsx,ts,tsx --max-warnings=0 --config .eslintrc.json --no-eslintrc",
@@ -20,18 +19,18 @@
   },
   "dependencies": {
     "@floating-ui/react": "0.19.0",
-    "classnames": "2.3.2",
-    "deepmerge": "4.2.2",
     "framer-motion": "6.5.1",
     "material-ripple-effects": "2.0.1",
     "prop-types": "15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwind-merge": "1.8.1"
+    "react-dom": "18.2.0"
   },
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",
-    "react-dom": "^16 || ^17 || ^18"
+    "react-dom": "^16 || ^17 || ^18",
+    "tailwind-merge": "1.8.1",
+    "classnames": "2.3.2",
+    "deepmerge": "4.2.2"
   },
   "devDependencies": {
     "@swc/cli": "0.1.59",
