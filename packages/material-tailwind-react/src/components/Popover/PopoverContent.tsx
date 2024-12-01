@@ -28,11 +28,10 @@ export interface PopoverContentProps extends React.ComponentProps<"div"> {
 export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
   ({ children, className, ...rest }, ref) => {
     // 1. init
-    const { popover } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = popover;
+    } = useTheme("popover");
     const {
       open,
       strategy,

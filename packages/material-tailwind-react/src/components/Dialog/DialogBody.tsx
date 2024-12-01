@@ -25,11 +25,10 @@ export interface DialogBodyProps extends React.ComponentProps<"div"> {
 export const DialogBody = React.forwardRef<HTMLDivElement, DialogBodyProps>(
   ({ divider, className, children, ...rest }, ref) => {
     // 1. init
-    const { dialogBody } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = dialogBody;
+    } = useTheme("dialogBody");
 
     // 2. set default props
     className = twMerge(defaultProps.className || "", className);

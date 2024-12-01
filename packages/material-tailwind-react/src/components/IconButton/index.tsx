@@ -42,8 +42,7 @@ export interface IconButtonProps extends React.ComponentProps<"button"> {
 export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
   ({ variant, size, color, ripple, className, children, fullWidth, ...rest }, ref) => {
     // 1. init
-    const { iconButton } = useTheme();
-    const { valid, defaultProps, styles } = iconButton;
+    const { valid, defaultProps, styles } = useTheme("iconButton");
     const { base, variants, sizes } = styles;
 
     // 2. set default props

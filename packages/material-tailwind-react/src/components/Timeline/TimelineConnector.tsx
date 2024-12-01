@@ -24,8 +24,7 @@ export interface TimelineConnectorProps extends React.HTMLAttributes<HTMLSpanEle
 export const TimelineConnector = React.forwardRef<HTMLSpanElement, TimelineConnectorProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { timelineConnector } = useTheme();
-    const { styles } = timelineConnector;
+    const { styles } = useTheme("timelineConnector");
     const { base } = styles;
     const [width] = useTimelineItem();
 

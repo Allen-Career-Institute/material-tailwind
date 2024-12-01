@@ -19,10 +19,9 @@ export interface ListItemSuffixProps extends React.ComponentProps<"div"> {
 
 export const ListItemSuffix = React.forwardRef<HTMLDivElement, ListItemSuffixProps>(({className, children, ...rest}, ref) => {
   // 1. init
-  const { list } = useTheme();
   const {
     styles: { base },
-  } = list;
+  } = useTheme("list");
 
   // 3. set styles
   const listItemSuffixClasses = twMerge(classnames(objectsToString(base.itemSuffix)), className);

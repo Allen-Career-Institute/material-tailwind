@@ -20,11 +20,10 @@ export interface CardBodyProps extends React.ComponentProps<"div"> {
 export const CardBody = React.forwardRef<HTMLDivElement, CardBodyProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { cardBody } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = cardBody;
+    } = useTheme("cardBody");
 
     // 2. set default props
     className = twMerge(defaultProps.className || "", className);

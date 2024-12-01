@@ -38,8 +38,7 @@ export interface TimelineItemProps extends React.HTMLAttributes<HTMLLIElement> {
 export const TimelineItem = React.forwardRef<HTMLLIElement, TimelineItemProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { timelineItem } = useTheme();
-    const { styles } = timelineItem;
+    const { styles } = useTheme('timelineItem');
     const { base } = styles;
     const [width, setWidth] = React.useState(0);
     const contextValue = React.useMemo(() => [width, setWidth], [width, setWidth]);

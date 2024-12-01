@@ -35,8 +35,7 @@ export interface TabsProps extends React.ComponentProps<"div" | any> {
 const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
   ({ value, className, orientation, children, ...rest }, ref) => {
     // 1. init
-    const { tabs } = useTheme();
-    const { defaultProps, styles } = tabs;
+    const { defaultProps, styles } = useTheme("tabs");
     const tabsId = React.useId();
 
     // 2. set default props

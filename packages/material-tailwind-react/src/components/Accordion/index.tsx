@@ -43,11 +43,10 @@ export interface AccordionProps extends React.ComponentProps<"div"> {
 const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
   ({ open, icon, animate, className, disabled, children, ...rest }, ref) => {
     // 1. init
-    const { accordion } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = accordion;
+    } = useTheme('accordion');
 
     // 2. set default props
     icon = icon ?? defaultProps.icon;

@@ -67,12 +67,11 @@ export interface DialogProps extends React.ComponentProps<"div"> {
 const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(
   ({ open, handler, size, dismiss, animate, className, children, ...rest }, ref) => {
     // 1. init
-    const { dialog } = useTheme();
     const {
       defaultProps,
       valid,
       styles: { base, sizes },
-    } = dialog;
+    } = useTheme("dialog");
 
     // 2. set default props
     handler = handler ?? undefined;

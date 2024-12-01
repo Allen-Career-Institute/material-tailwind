@@ -43,8 +43,7 @@ export interface ButtonGroupProps extends React.ComponentProps<"div"> {
 export const ButtonGroup = React.forwardRef<HTMLDivElement, ButtonGroupProps>(
   ({ variant, size, color, fullWidth, ripple, className, children, ...rest }, ref) => {
     // 1. init
-    const { buttonGroup } = useTheme();
-    const { defaultProps, styles, valid } = buttonGroup;
+    const { defaultProps, styles, valid } = useTheme("buttonGroup");
     const { base, dividerColor } = styles;
 
     // 2. set default props

@@ -61,8 +61,7 @@ export const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
     ref,
   ) => {
     // 1. init
-    const { rating } = useTheme();
-    const { valid, defaultProps, styles } = rating;
+    const { valid, defaultProps, styles } = useTheme("rating");
     const { base, colors } = styles;
 
     // 2. set default props

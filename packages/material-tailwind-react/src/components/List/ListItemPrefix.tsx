@@ -20,10 +20,9 @@ export interface ListItemPrefixProps extends React.ComponentProps<"div"> {
 export const ListItemPrefix = React.forwardRef<HTMLDivElement, ListItemPrefixProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { list } = useTheme();
     const {
       styles: { base },
-    } = list;
+    } = useTheme("list");
 
     // 3. set styles
     const listItemPrefixClasses = twMerge(

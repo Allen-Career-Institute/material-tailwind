@@ -73,8 +73,7 @@ export const MenuCore = React.forwardRef<
     ref,
   ) => {
     // 1. init
-    const { menu } = useTheme();
-    const { defaultProps } = menu;
+    const { defaultProps } = useTheme("menu");
     const [internalOpen, setInternalOpen] = React.useState(false);
     const [internalAllowHover, setInternalAllowHover] = React.useState(false);
 

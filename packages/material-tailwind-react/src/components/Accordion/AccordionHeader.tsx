@@ -22,10 +22,9 @@ export const AccordionHeader = React.forwardRef<HTMLButtonElement, AccordionHead
   ({ className, children, ...rest }, ref) => {
     // 1. init
     const { open, icon, disabled } = useAccordion();
-    const { accordion } = useTheme();
     const {
       styles: { base },
-    } = accordion;
+    } = useTheme('accordion');
 
     // 2. set default props
     className = className ?? "";

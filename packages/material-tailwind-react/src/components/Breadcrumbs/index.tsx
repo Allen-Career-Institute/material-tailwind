@@ -27,11 +27,10 @@ export interface BreadcrumbsProps extends React.ComponentProps<"ol"> {
 export const Breadcrumbs = forwardRef<HTMLOListElement, BreadcrumbsProps>(
   ({ separator, fullWidth, className, children, ...rest }, ref) => {
     // 1. init
-    const { breadcrumbs } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = breadcrumbs;
+    } = useTheme('breadcrumbs');
 
     // 2. set default props
     separator = separator ?? defaultProps.separator;

@@ -26,11 +26,10 @@ export interface TabPanelProps extends MotionProps {
 export const TabPanel = React.forwardRef<HTMLDivElement, TabPanelProps>(
   ({ value, className, children, ...rest }, ref) => {
     // 1. init
-    const { tabPanel } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = tabPanel;
+    } = useTheme("tabPanel");
     const { state } = useTabs();
     const { active, appliedAnimation, isInitial } = state;
 

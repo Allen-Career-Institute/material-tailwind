@@ -1,4 +1,4 @@
-const MTBreakpoints = {
+const breakpoints = {
   sm: "540px",
   md: "720px",
   lg: "960px",
@@ -7,4 +7,4 @@ const MTBreakpoints = {
   "2xl": "1320px",
 };
 
-export { MTBreakpoints }
+export { breakpoints }

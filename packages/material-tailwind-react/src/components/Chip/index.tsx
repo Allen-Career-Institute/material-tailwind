@@ -61,8 +61,7 @@ export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
     ref,
   ) => {
     // 1. init
-    const { chip } = useTheme();
-    const { defaultProps, valid, styles } = chip;
+    const { defaultProps, valid, styles } = useTheme("chip");
     const { base, variants, sizes } = styles;
 
     // 2. set default props

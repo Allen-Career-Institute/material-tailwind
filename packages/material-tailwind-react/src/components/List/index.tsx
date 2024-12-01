@@ -25,11 +25,10 @@ export interface ListProps extends React.ComponentProps<"div"> {
 export const List = React.forwardRef<HTMLDivElement, ListProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { list } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = list;
+    } = useTheme("list");
 
     // 2. set default props
     className = twMerge(defaultProps.className || "", className);

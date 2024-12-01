@@ -58,8 +58,7 @@ export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
     ref,
   ) => {
     // 1. init
-    const { switch: toggle } = useTheme();
-    const { defaultProps, valid, styles } = toggle;
+    const { defaultProps, valid, styles } = useTheme("switch");
     const { base, colors } = styles;
     const switchId = React.useId();
 

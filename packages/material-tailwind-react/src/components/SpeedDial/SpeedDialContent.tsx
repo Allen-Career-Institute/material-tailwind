@@ -24,8 +24,8 @@ export const SpeedDialContent = React.forwardRef<HTMLDivElement, SpeedDialConten
   ({ children, className, ...rest }, ref) => {
     // 1. init
     const {
-      speedDialContent: { styles },
-    } = useTheme();
+       styles,
+    } = useTheme("speedDialContent");
     const { x, y, refs, open, strategy, getFloatingProps, animation } = useSpeedDial();
     const mergedRefs = useMergeRefs([ref, refs.setFloating]);
 

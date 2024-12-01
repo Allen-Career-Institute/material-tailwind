@@ -30,8 +30,7 @@ export interface TimelineProps extends React.HTMLAttributes<HTMLUListElement> {
 export const Timeline = React.forwardRef<HTMLUListElement, TimelineProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { timeline } = useTheme();
-    const { styles } = timeline;
+    const { styles } = useTheme("timeline");
     const { base } = styles;
 
     // 3. set styles

@@ -58,8 +58,7 @@ More details: https://www.material-tailwind.com/docs/react/collapse
 
     // 1. init
     const mobileNavRef = React.useRef(null);
-    const { navbar } = useTheme();
-    const { styles } = navbar;
+    const { styles } = useTheme("navbar");
     const {
       base: { mobileNav },
     } = styles;

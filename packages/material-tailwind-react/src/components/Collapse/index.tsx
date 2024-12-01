@@ -51,8 +51,7 @@ export const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
   ({ open, animate, className, children, ...rest }, ref) => {
     // 1. init
     const mobileNavRef = React.useRef(null);
-    const { collapse } = useTheme();
-    const { styles } = collapse;
+    const { styles } = useTheme("collapse");
     const { base } = styles;
 
     // 2. set default props

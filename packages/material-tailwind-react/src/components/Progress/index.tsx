@@ -43,8 +43,7 @@ export interface ProgressProps extends React.ComponentProps<"div"> {
 export const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
   ({ variant, color, size, value, label, className, barProps, ...rest }, ref) => {
     // 1. init
-    const { progress } = useTheme();
-    const { defaultProps, valid, styles } = progress;
+    const { defaultProps, valid, styles } = useTheme("progress");
     const { base, variants, sizes } = styles;
 
     // 2. set default props

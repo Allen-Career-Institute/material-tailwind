@@ -25,11 +25,10 @@ export interface CardFooterProps extends React.ComponentProps<"div"> {
 export const CardFooter = React.forwardRef<HTMLDivElement, CardFooterProps>(
   ({ divider, className, children, ...rest }, ref) => {
     // 1. init
-    const { cardFooter } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = cardFooter;
+    } = useTheme("cardFooter");
 
     // 2. set default props
     divider = divider ?? defaultProps.divider;

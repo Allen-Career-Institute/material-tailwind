@@ -34,11 +34,10 @@ export interface ListItemProps extends React.ComponentProps<"div"> {
 export const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
   ({ className, disabled, selected, ripple, children, ...rest }, ref) => {
     // 1. init
-    const { list } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = list;
+    } = useTheme("list");
 
     // 2. set default props
     ripple = ripple ?? defaultProps.ripple;

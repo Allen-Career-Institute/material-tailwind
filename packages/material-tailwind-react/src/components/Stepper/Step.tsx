@@ -25,10 +25,9 @@ export interface StepProps extends React.ComponentProps<"div"> {
 export const Step = React.forwardRef<HTMLDivElement, StepProps>(
   ({ className, activeClassName, completedClassName, children, ...rest }, ref) => {
     // 1. init
-    const { step } = useTheme();
     const {
       styles: { base },
-    } = step;
+    } = useTheme("step");
 
     // 3. set styles
     const stepClasses = twMerge(objectsToString(base.initial), className);

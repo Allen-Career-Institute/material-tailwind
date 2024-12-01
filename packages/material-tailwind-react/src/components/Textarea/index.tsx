@@ -71,8 +71,7 @@ export const Textarea = React.forwardRef<HTMLDivElement, TextareaProps>(
     ref,
   ) => {
     // 1. init
-    const { textarea } = useTheme();
-    const { defaultProps, valid, styles } = textarea;
+    const { defaultProps, valid, styles } = useTheme("textarea");
     const { base, variants } = styles;
 
     // 2. set default props

@@ -75,11 +75,10 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
     ref,
   ) => {
     // 1. init
-    const { drawer } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = drawer;
+    } = useTheme("drawer");
     const constrols = useAnimation();
 
     // 2. set default props

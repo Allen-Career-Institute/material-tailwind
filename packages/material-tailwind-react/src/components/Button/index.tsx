@@ -49,8 +49,7 @@ export interface ButtonProps extends React.ComponentProps<"button"> {
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant, size, color, fullWidth, ripple, className, children, loading, ...rest }, ref) => {
     // 1. init
-    const { button } = useTheme();
-    const { valid, defaultProps, styles } = button;
+    const { valid, defaultProps, styles } = useTheme("button");
     const { base, variants, sizes } = styles;
 
     // 2. set default props

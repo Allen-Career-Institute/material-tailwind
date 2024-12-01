@@ -55,8 +55,7 @@ export interface AlertProps extends Omit<MotionProps, "animate"> {
 export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   ({ variant, color, icon, open, action, onClose, animate, className, children, ...rest }, ref) => {
     // 1. init
-    const { alert } = useTheme();
-    const { defaultProps, valid, styles } = alert;
+    const { defaultProps, valid, styles } = useTheme("alert");
     const { base, variants } = styles;
 
     // 2. set default props

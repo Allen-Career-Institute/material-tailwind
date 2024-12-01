@@ -143,8 +143,7 @@ const Select = React.forwardRef<HTMLDivElement, SelectProps>(
     ref,
   ) => {
     // 1. init
-    const { select } = useTheme();
-    const { defaultProps, valid, styles } = select;
+    const { defaultProps, valid, styles } = useTheme("select");
     const { base, variants } = styles;
     const [state, setState] = React.useState<string>("close");
 

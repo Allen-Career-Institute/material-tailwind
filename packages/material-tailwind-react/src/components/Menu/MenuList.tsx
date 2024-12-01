@@ -34,10 +34,9 @@ export interface MenuListProps extends React.ComponentProps<"ul"> {
 export const MenuList = React.forwardRef<HTMLUListElement, MenuListProps>(
   ({ children, className, ...rest }, ref) => {
     // 1. init
-    const { menu } = useTheme();
     const {
       styles: { base },
-    } = menu;
+    } = useTheme("menu");
     const {
       open,
       handler,

@@ -35,8 +35,7 @@ export const SelectOption = ({
   children,
   ...rest
 }: SelectOptionProps) => {
-  const { select } = useTheme();
-  const { styles } = select;
+  const { styles } = useTheme("select");
   const { base } = styles;
 
   // 2. set @floating-ui

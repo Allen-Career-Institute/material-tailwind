@@ -26,8 +26,7 @@ export interface TabsHeaderProps extends React.ComponentProps<"ul"> {
 export const TabsHeader = React.forwardRef<HTMLUListElement, TabsHeaderProps>(
   ({ indicatorProps, className, children, ...rest }, ref) => {
     // 1. init
-    const { tabsHeader } = useTheme();
-    const { defaultProps, styles } = tabsHeader;
+    const { defaultProps, styles } = useTheme("tabsHeader");
     const { state, dispatch } = useTabs();
     const { orientation } = state;
 

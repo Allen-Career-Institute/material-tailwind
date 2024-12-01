@@ -66,8 +66,7 @@ const Popover = ({
   children,
 }: PopoverProps) => {
   // 1. init
-  const { popover } = useTheme();
-  const { defaultProps } = popover;
+  const { defaultProps } = useTheme("popover");
   const [internalOpen, setInternalOpen] = React.useState(false);
 
   // 2. set default props

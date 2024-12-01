@@ -73,8 +73,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ref,
   ) => {
     // 1. init
-    const { input } = useTheme();
-    const { defaultProps, valid, styles } = input;
+    const { defaultProps, valid, styles } = useTheme("input");
     const { base, variants } = styles;
 
     // 2. set default props

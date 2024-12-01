@@ -50,7 +50,8 @@ import {
 import { step, stepper } from "./components/stepper";
 import { speedDial, speedDialContent, speedDialAction } from "./components/speedDial";
 
-const theme: any = {
+// Add the imported theme constant here for type generation and add it in the below object for exporting is as Styles
+const theme = {
   accordion,
   alert,
   avatar,
@@ -104,6 +105,61 @@ const theme: any = {
   speedDialContent,
   speedDialAction,
 };
+export {
+  accordion as AccordionStyles,
+  alert as AlertStyles,
+  avatar as AvatarStyles,
+  breadcrumbs as BreadcrumbsStyles,
+  button as ButtonStyles,
+  card as CardStyles,
+  cardBody as CardBodyStyles,
+  cardFooter as CardFooterStyles,
+  cardHeader as CardHeaderStyles,
+  checkbox as CheckboxStyles,
+  chip as ChipStyles,
+  dialog as DialogStyles,
+  dialogBody as DialogBodyStyles,
+  dialogFooter as DialogFooterStyles,
+  dialogHeader as DialogHeaderStyles,
+  iconButton as IconButtonStyles,
+  input as InputStyles,
+  menu as MenuStyles,
+  navbar as NavbarStyles,
+  popover as PopoverStyles,
+  progress as ProgressStyles,
+  radio as RadioStyles,
+  select as SelectStyles,
+  switchButton as SwitchStyles,
+  tab as TabStyles,
+  tabs as TabsStyles,
+  tabsBody as TabsBodyStyles,
+  tabsHeader as TabsHeaderStyles,
+  tabPanel as TabPanelStyles,
+  textarea as TextareaStyles,
+  tooltip as TooltipStyles,
+  typography as TypographyStyles,
+  collapse as CollapseStyles,
+  list as ListStyles,
+  buttonGroup as ButtonGroupStyles,
+  carousel as CarouselStyles,
+  drawer as DrawerStyles,
+  badge as BadgeStyles,
+  rating as RatingStyles,
+  slider as SliderStyles,
+  spinner as SpinnerStyles,
+  timeline as TimelineStyles,
+  timelineItem as TimelineItemStyles,
+  timelineIcon as TimelineIconStyles,
+  timelineHeader as TimelineHeaderStyles,
+  timelineBody as TimelineBodyStyles,
+  timelineConnector as TimelineConnectorStyles,
+  step as StepStyles,
+  stepper as StepperStyles,
+  speedDial as SpeedDialStyles,
+  speedDialContent as SpeedDialContentStyles,
+  speedDialAction as SpeedDialActionStyles,
+}
+export type MTTheme = typeof theme;
 
 export * from "./components/accordion";
 export * from "./components/alert";
