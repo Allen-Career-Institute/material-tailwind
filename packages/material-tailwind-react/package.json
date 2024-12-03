@@ -11,6 +11,7 @@
   "type": "module",
   "sideEffects": false,
   "scripts": {
+    "publish": "cd dist && npm publish",
     "build:cjs": "swc ./src -d ./dist --only ./src/**/*.ts --config-file .swcrc",
     "build:dts": "tsc -p tsconfig.json --emitDeclarationOnly",
     "copy": "cp ./package.json ./dist && cp ./README.md ./dist && cp ./LICENSE ./dist",
