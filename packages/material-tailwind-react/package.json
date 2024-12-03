@@ -1,7 +1,7 @@
 {
   "name": "@allen-career-institute/material-tailwind-react",
   "homepage": "https://material-tailwind.com",
-  "version": "2.2.1-test-esm-0",
+  "version": "2.2.2",
   "description": "@material-tailwind/react is an easy-to-use components library for ReactJS & Tailwind CSS inspired by Material Design.",
   "repository": "https://github.com/creativetimofficial/material-tailwind",
   "license": "MIT",
@@ -11,7 +11,7 @@
   "type": "module",
   "sideEffects": false,
   "scripts": {
-    "publish": "cd dist && npm publish && cd ..",
+    "push-package": "cd dist && npm publish && cd ..",
     "build:cjs": "swc ./src -d ./dist --only ./src/**/*.ts --config-file .swcrc",
     "build:dts": "tsc -p tsconfig.json --emitDeclarationOnly && tsc-alias",
     "copy": "cp ./package.json ./dist && cp ./README.md ./dist && cp ./LICENSE ./dist",
