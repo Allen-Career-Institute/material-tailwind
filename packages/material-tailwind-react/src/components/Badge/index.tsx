@@ -66,8 +66,7 @@ export const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
     ref,
   ) => {
     // 1. init
-    const { badge } = useTheme();
-    const { valid, defaultProps, styles } = badge;
+    const { valid, defaultProps, styles } = useTheme("badge");
     const { base, placements, colors } = styles;
 
     // 2. set default props

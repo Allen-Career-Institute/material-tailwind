@@ -4,9 +4,11 @@
     "parser": {
       "syntax": "typescript",
       "tsx": true
-    }
+    },
+    "keepClassNames": true
   },
   "module": {
-    "type": "commonjs"
-  }
+    "type": "es6"
+  },
+  "exclude": ["tailwind-merge", "classnames", "deepmerge", "framer-motion"]
 }

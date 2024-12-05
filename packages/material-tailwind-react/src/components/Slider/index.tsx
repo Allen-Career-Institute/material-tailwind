@@ -85,8 +85,7 @@ export const Slider = React.forwardRef<HTMLDivElement, SliderProps>(
     ref,
   ) => {
     // 1. init
-    const { slider } = useTheme();
-    const { valid, defaultProps, styles } = slider;
+    const { valid, defaultProps, styles } = useTheme("slider");
     const { base, sizes, colors } = styles;
     const [innerValue, setInnerValue] = React.useState(defaultValue || 0);
 

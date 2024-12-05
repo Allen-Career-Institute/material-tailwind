@@ -27,10 +27,9 @@ export const MenuItem = React.forwardRef<
   MenuItemProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 >(({ className = "", disabled = false, children, ...rest }, ref) => {
   // 1. init
-  const { menu } = useTheme();
   const {
     styles: { base },
-  } = menu;
+  } = useTheme("menu");
 
   // 2. set styles
   const menuItemClasses = twMerge(

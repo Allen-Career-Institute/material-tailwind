@@ -31,8 +31,7 @@ export interface AvatarProps extends React.ComponentProps<"img"> {
 export const Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(
   ({ variant, size, className, color, withBorder, ...rest }, ref) => {
     // 1. init
-    const { avatar } = useTheme();
-    const { valid, defaultProps, styles } = avatar;
+    const { valid, defaultProps, styles } = useTheme("avatar");
     const { base, variants, sizes, borderColor } = styles;
 
     // 2. set default props

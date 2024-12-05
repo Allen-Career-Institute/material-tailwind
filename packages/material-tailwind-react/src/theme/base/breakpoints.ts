@@ -7,4 +7,4 @@ const breakpoints = {
   "2xl": "1320px",
 };
 
-module.exports = breakpoints;
+export { breakpoints }

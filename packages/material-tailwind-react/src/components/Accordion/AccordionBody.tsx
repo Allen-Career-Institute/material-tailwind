@@ -27,10 +27,9 @@ export const AccordionBody = React.forwardRef<HTMLDivElement, AccordionBodyProps
   ({ className, children, ...rest }, ref) => {
     // 1. init
     const { open, animate } = useAccordion();
-    const { accordion } = useTheme();
     const {
       styles: { base },
-    } = accordion;
+    } = useTheme('accordion');
 
     // 2. set default props
     className = className ?? "";

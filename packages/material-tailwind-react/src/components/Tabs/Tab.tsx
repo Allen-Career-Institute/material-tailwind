@@ -32,11 +32,10 @@ export interface TabProps extends React.ComponentProps<"li"> {
 export const Tab = React.forwardRef<HTMLLIElement, TabProps>(
   ({ value, className, activeClassName, disabled, children, ...rest }, ref) => {
     // 1. init
-    const { tab: tabTheme } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = tabTheme;
+    } = useTheme("tab");
     const { state, dispatch } = useTabs();
     const { id, active, indicatorProps } = state;
 

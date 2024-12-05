@@ -49,9 +49,7 @@ export interface TypographyProps extends BaseTypographyProps {
 
 export const Typography = React.forwardRef<HTMLElement, TypographyProps>(
   ({ variant, color, textGradient, as, className, children, ...rest }, ref) => {
-    // 1. init
-    const { typography } = useTheme();
-    const { defaultProps, valid, styles } = typography;
+    const { defaultProps, valid, styles } = useTheme('typography');
     const { variants, colors, textGradient: gradient } = styles;
 
     // 2. set default props

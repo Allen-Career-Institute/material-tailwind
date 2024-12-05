@@ -3,7 +3,7 @@
   "version": "0.1.6",
   "description": "CLI for creating @material-tailwind project.",
   "main": "index.js",
-  "author": "Sajad",
+  "author": "Dinesh Kumar D",
   "license": "MIT",
   "type": "module",
   "publishConfig": {

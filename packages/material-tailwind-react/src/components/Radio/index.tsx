@@ -62,8 +62,7 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
     ref,
   ) => {
     // 1. init
-    const { radio } = useTheme();
-    const { defaultProps, valid, styles } = radio;
+    const { defaultProps, valid, styles } = useTheme("radio");
     const { base, colors } = styles;
     const radioId = React.useId();
 

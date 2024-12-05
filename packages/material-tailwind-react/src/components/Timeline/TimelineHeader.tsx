@@ -23,8 +23,7 @@ export interface TimelineHeaderProps extends React.HTMLAttributes<HTMLDivElement
 export const TimelineHeader = React.forwardRef<HTMLDivElement, TimelineHeaderProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { timelineHeader } = useTheme();
-    const { styles } = timelineHeader;
+    const { styles } = useTheme('timelineHeader');
     const { base } = styles;
 
     // 3. set styles

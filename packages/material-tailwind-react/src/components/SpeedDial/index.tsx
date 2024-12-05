@@ -76,9 +76,7 @@ function SpeedDial({
   children,
 }: SpeedDialProps) {
   // 1. init
-  const {
-    speedDial: { defaultProps },
-  } = useTheme();
+  const { defaultProps } = useTheme("speedDial");
   const [internalOpen, setInternalOpen] = React.useState(false);
 
   // 2. set default props

@@ -16,8 +16,8 @@ export const SpeedDialAction = React.forwardRef<HTMLButtonElement, SpeedDialActi
   ({ className, children, ...rest }, ref) => {
     // 1. init
     const {
-      speedDialAction: { styles },
-    } = useTheme();
+      styles,
+    } = useTheme("speedDialAction");
 
     // 2. set styles
     const classes = twMerge(objectsToString(styles), className);

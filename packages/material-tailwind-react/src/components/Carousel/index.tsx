@@ -69,11 +69,10 @@ export const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
     ref,
   ) => {
     // 1. init
-    const { carousel } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = carousel;
+    } = useTheme("carousel");
     const x = useMotionValue(0);
     const containerRef = React.useRef<HTMLDivElement>(null);
     const [index, setIndex] = React.useState(0);

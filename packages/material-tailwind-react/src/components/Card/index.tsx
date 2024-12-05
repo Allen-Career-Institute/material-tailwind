@@ -36,8 +36,7 @@ export interface CardProps extends React.ComponentProps<"div"> {
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ variant, color, shadow, className, children, ...rest }, ref) => {
     // 1. init
-    const { card } = useTheme();
-    const { defaultProps, styles, valid } = card;
+    const { defaultProps, styles, valid } = useTheme("card");
     const { base, variants } = styles;
 
     // 2. set default props

@@ -40,8 +40,7 @@ export interface CardHeaderProps extends React.ComponentProps<"div"> {
 export const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>(
   ({ variant, color, shadow, floated, className, children, ...rest }, ref) => {
     // 1. init
-    const { cardHeader } = useTheme();
-    const { defaultProps, styles, valid } = cardHeader;
+    const { defaultProps, styles, valid } = useTheme("cardHeader");
     const { base, variants } = styles;
 
     // 2. set default props

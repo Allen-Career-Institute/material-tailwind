@@ -24,8 +24,7 @@ export interface TimelineBodyProps extends React.HTMLAttributes<HTMLDivElement> 
 export const TimelineHeader = React.forwardRef<HTMLDivElement, TimelineBodyProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { timelineBody } = useTheme();
-    const { styles } = timelineBody;
+    const { styles } = useTheme("timelineBody");
     const { base } = styles;
     const [width] = useTimelineItem();
 

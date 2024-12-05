@@ -35,8 +35,7 @@ export interface TimelineIconProps extends React.HTMLAttributes<HTMLSpanElement>
 export const TimelineIcon = React.forwardRef<HTMLSpanElement, TimelineIconProps>(
   ({ color, variant, className, children, ...rest }, ref) => {
     // 1. init
-    const { timelineIcon } = useTheme();
-    const { styles, valid } = timelineIcon;
+    const { styles, valid } = useTheme('timelineIcon');
     const { base, variants } = styles;
     const [, setWidth] = useTimelineItem();
     const innerRef = React.useRef<HTMLSpanElement>(null);

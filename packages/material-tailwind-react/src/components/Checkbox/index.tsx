@@ -62,8 +62,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     ref,
   ) => {
     // 1. init
-    const { checkbox } = useTheme();
-    const { defaultProps, valid, styles } = checkbox;
+    const { defaultProps, valid, styles } = useTheme("checkbox");
     const { base, colors } = styles;
     const checkboxId = React.useId();
 

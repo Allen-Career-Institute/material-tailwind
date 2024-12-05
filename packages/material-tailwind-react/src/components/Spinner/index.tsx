@@ -22,12 +22,11 @@ export interface SpinnerProps extends React.ComponentProps<"svg"> {
 export const Spinner = forwardRef<SVGSVGElement, SpinnerProps>(
   ({ color, className, ...rest }, ref) => {
     // 1. init
-    const { spinner } = useTheme();
     const {
       defaultProps,
       valid,
       styles: { base, colors },
-    } = spinner;
+    } = useTheme("spinner");
 
     // 2. set default props
     color = color ?? defaultProps.color;

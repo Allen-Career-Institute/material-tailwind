@@ -87,12 +87,10 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
     },
     ref,
   ) => {
-    // 1. init
-    const { tooltip } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = tooltip;
+    } =  useTheme('tooltip');
     const [internalOpen, setInternalOpen] = React.useState(false);
 
     // 2. set default props

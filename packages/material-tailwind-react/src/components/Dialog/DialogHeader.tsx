@@ -20,11 +20,10 @@ export interface DialogHeaderProps extends React.ComponentProps<"div"> {
 export const DialogHeader = React.forwardRef<HTMLDivElement, DialogHeaderProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { dialogHeader } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = dialogHeader;
+    } = useTheme("dialogHeader");
 
     // 2. set default props
     className = twMerge(defaultProps.className || "", className);

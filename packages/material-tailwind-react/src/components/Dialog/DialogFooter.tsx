@@ -20,11 +20,10 @@ export interface DialogFooterProps extends React.ComponentProps<"div"> {
 export const DialogFooter = React.forwardRef<HTMLDivElement, DialogFooterProps>(
   ({ className, children, ...rest }, ref) => {
     // 1. init
-    const { dialogFooter } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = dialogFooter;
+    } = useTheme("dialogFooter");
 
     // 2. set default props
     className = twMerge(defaultProps.className || "", className);

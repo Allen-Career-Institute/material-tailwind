@@ -30,11 +30,10 @@ export interface TabsBodyProps extends React.ComponentProps<"div"> {
 export const TabsBody = React.forwardRef<HTMLDivElement, TabsBodyProps>(
   ({ animate, className, children, ...rest }, ref) => {
     // 1. init
-    const { tabsBody } = useTheme();
     const {
       defaultProps,
       styles: { base },
-    } = tabsBody;
+    } = useTheme("tabsBody");
     const { dispatch } = useTabs();
 
     // 2. set default props

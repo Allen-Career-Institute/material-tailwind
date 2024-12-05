@@ -46,8 +46,7 @@ export interface NavbarProps extends React.ComponentProps<"div"> {
 const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
   ({ variant, color, shadow, blurred, fullWidth, className, children, ...rest }, ref) => {
     // 1. init
-    const { navbar } = useTheme();
-    const { defaultProps, valid, styles } = navbar;
+    const { defaultProps, valid, styles } = useTheme("navbar");
     const { base, variants } = styles;
 
     // 2. set default props

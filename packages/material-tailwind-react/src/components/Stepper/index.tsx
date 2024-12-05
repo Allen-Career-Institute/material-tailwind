@@ -52,13 +52,12 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
     ref,
   ) => {
     // 1. init
-    const { stepper, step } = useTheme();
     const {
       styles: { base },
-    } = stepper;
+    } = useTheme("stepper");
     const {
       styles: { base: stepBase },
-    } = step;
+    } = useTheme("step");
     const containerRef = React.useRef(null);
 
     const [widthPerStep, setWidthPerStep] = React.useState(0);
