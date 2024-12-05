@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useMemo, ReactNode } from "react";
-import merge from "deepmerge";
 import { MTTheme } from "../theme";
-import combineMerge from "../utils/combineMerge";
 
 interface ThemeProviderProps {
   value?: Partial<MTTheme>;
@@ -13,9 +11,9 @@ const MaterialTailwindTheme = createContext<Partial<MTTheme> | undefined>({});
 MaterialTailwindTheme.displayName = "MaterialTailwindThemeProvider";
 
 function ThemeProvider({ value, children }: ThemeProviderProps) {
-  const mergedValue = useMemo(() => merge({}, value || {}, { arrayMerge: combineMerge }), [value]);
+  // const mergedValue = useMemo(() => merge({}, value || {}, { arrayMerge: combineMerge }), [value]);
 
-  return <MaterialTailwindTheme.Provider value={mergedValue}>{children}</MaterialTailwindTheme.Provider>
+  return <MaterialTailwindTheme.Provider value={value}>{children}</MaterialTailwindTheme.Provider>
 }
 const useTheme = <K extends keyof MTTheme>(key: K): MTTheme[K] => {
   const theme = useContext(MaterialTailwindTheme);
